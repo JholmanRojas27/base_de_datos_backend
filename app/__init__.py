@@ -47,4 +47,8 @@ def create_app():
         security='Bearer'  # Define que los endpoints por defecto usan el esquema de seguridad JWT
     )
 
+    from .controllers.cliente_controllers import clienet_ns
+
+    api.add_namespace(clienet_ns, path='cliente')
+
     return app
